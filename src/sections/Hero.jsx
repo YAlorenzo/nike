@@ -6,13 +6,14 @@ import { shoes, statistics } from "../constants";
 import ShoeCard from "../components/ShoeCard";
 
 import {  useEffect, useState } from "react";
+import { bigShoe1 } from "../assets/images";
 
 
 
 
 
 const Hero = () => {
-  const [bigShoe, setBigShoe] = useState();
+  const [bigShoe, setBigShoe] = useState(bigShoe1);
 
   const changeBigShoeImg = (shoe) => {
     localStorage.setItem('shoe', JSON.stringify(shoe.bigShoe));
