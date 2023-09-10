@@ -22,7 +22,9 @@ const Hero = () => {
 
   useEffect(() => {
     const currentShoe = JSON.parse(localStorage.getItem('shoe'));
-    setBigShoe(currentShoe);
+    if (currentShoe) {
+       setBigShoe(currentShoe);
+    }
   },[])
 
 
